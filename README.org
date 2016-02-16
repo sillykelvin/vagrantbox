@@ -1,0 +1,7 @@
+#+TITLE:     Vagrant configuration of Archlinux box
+#+AUTHOR:    Kelvin Hu
+#+EMAIL:     ini.kelvin@gmail.com
+#+DATE:      2016-02-16 Tue
+
+
+My vagrant configuration of Archlinux box, based on *ogarcia/archlinux-x64*, thanks to this great box!
