@@ -20,19 +20,21 @@ sudo pacman-key -r 962DDE58
 sudo pacman-key --lsign-key 962DDE58
 
 echo ">>>>> installing packages..."
-sudo pacman -Syyu          --noconfirm
-sudo pacman -S git         --noconfirm
-sudo pacman -S zsh         --noconfirm
-sudo pacman -S gvim        --noconfirm
-sudo pacman -S tmux        --noconfirm
-sudo pacman -S meld        --noconfirm
-sudo pacman -S emacs       --noconfirm
-sudo pacman -S clang       --noconfirm
-sudo pacman -S nodejs      --noconfirm
-sudo pacman -S qtcreator   --noconfirm
-sudo pacman -S xorg-xauth  --noconfirm
-sudo pacman -S xorg-xhost  --noconfirm
-sudo pacman -S xorg-server --noconfirm
+sudo pacman -Syyu                  --noconfirm
+sudo pacman -S git                 --noconfirm
+sudo pacman -S zsh                 --noconfirm
+sudo pacman -S gvim                --noconfirm
+sudo pacman -S tmux                --noconfirm
+sudo pacman -S meld                --noconfirm
+sudo pacman -S emacs               --noconfirm
+sudo pacman -S clang               --noconfirm
+sudo pacman -S nodejs              --noconfirm
+sudo pacman -S corkscrew           --noconfirm
+sudo pacman -S qtcreator           --noconfirm
+sudo pacman -S xorg-xauth          --noconfirm
+sudo pacman -S xorg-xhost          --noconfirm
+sudo pacman -S xorg-server         --noconfirm
+sudo pacman -S the_silver_searcher --noconfirm
 
 echo ">>>>> installing infinality bundle..."
 sudo sh -c "yes y$'\n' | pacman -S cairo-infinality-ultimate"
@@ -91,3 +93,8 @@ ln -s .config/zsh/zprofile .zprofile
 ln -s .config/zsh/zshrc .zshrc
 ln -s .config/git/gitconfig .gitconfig
 cd $prevdir
+
+echo ">>>>> configuring ssh..."
+echo "ProxyCommand corkscrew web-proxy.oa.com 8080 %h %p" > ~/.ssh/config
+cp /vagrant/id_rsa ~/.ssh
+chmod 600 ~/.ssh/id_rsa

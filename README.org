@@ -5,3 +5,13 @@
 
 
 My vagrant configuration of Archlinux box, based on *ogarcia/archlinux-x64*, thanks to this great box!
+
+* Installation:
+
+1. clone this repo
+2. copy your ssh private key to the repo's folder(it will be copied to the box, and used to do authentication with GitHub/BitBucket, so you don't need to setup another authentication key for them)
+3. run =vagrant up=, wait for the provision to finish
+
+* TODO:
+
+1. make hard coded web proxy configurable.
