@@ -31,6 +31,7 @@ sudo pacman -S clang               --noconfirm
 sudo pacman -S nodejs              --noconfirm
 sudo pacman -S corkscrew           --noconfirm
 sudo pacman -S qtcreator           --noconfirm
+sudo pacman -S subversion          --noconfirm
 sudo pacman -S xorg-xauth          --noconfirm
 sudo pacman -S xorg-xhost          --noconfirm
 sudo pacman -S xorg-server         --noconfirm
