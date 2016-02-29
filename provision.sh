@@ -23,6 +23,7 @@ echo ">>>>> installing packages..."
 sudo pacman -Syyu                  --noconfirm
 sudo pacman -S git                 --noconfirm
 sudo pacman -S zsh                 --noconfirm
+sudo pacman -S npm                 --noconfirm
 sudo pacman -S gvim                --noconfirm
 sudo pacman -S tmux                --noconfirm
 sudo pacman -S meld                --noconfirm
